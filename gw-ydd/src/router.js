@@ -6,12 +6,24 @@ Vue.use(Router);
 export default new Router({
     base: process.env.BASE_URL,
     routes: [
-        { path: '/', redirect: '/aboutUsTwo' },
+        { path: '/', redirect: '/cp' },
         {
-            path: '/aboutUsTwo',
+            path: '/sy',
             name: 'aboutUsTwo',
             component: () =>
-                import ( /* webpackChunkName: "AboutUs" */ './views/AboutUsTwo/index.vue'),
+                import ( /* webpackChunkName: "AboutUs" */ './views/sy/index.vue'),
+        },
+        {
+            path: '/gy',
+            name: 'gy',
+            component: () =>
+                import ( /* webpackChunkName: "AboutUs" */ './views/gy/index.vue'),
+        },
+        {
+            path: '/cp',
+            name: 'cp',
+            component: () =>
+                import ( /* webpackChunkName: "AboutUs" */ './views/cp/index.vue'),
         },
         
     ],

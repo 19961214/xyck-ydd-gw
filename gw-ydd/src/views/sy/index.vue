@@ -226,6 +226,7 @@ export default {
 @rem: 46.875rem;
 .wrap {
   width: 100%;
+  margin-top: 100/@rem;
   .content1 {
     width: 100%;
     height: 460 / @rem;

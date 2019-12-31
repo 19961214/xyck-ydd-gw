@@ -1,7 +1,7 @@
 <template>
   <div class="Footer">
     <div class="footer-top">
-      <img class="footer-top-img" src="../assets/imgs/footer1.png" alt />
+      <img class="footer-top-img" src="../assets/imgs/footer11.png" alt />
       <div class="footer-top-text1">关注厦云创科</div>
       <div class="footer-top-text2">为您提供发薪报税一站式专属定制服务</div>
       <div class="footer-top-btn">打开小程序</div>
