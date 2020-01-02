@@ -1,12 +1,24 @@
 <template>
   <div>
-    <div id="header">
-      <img class="header1" src="../assets/imgs/header1.png" alt />
+    <div class="header">
+      <img class="header1" @click="showPopup" src="../assets/imgs/header1.png" alt />
       <img class="header2" src="../assets/imgs/logo.png" alt />
-      <van-cell is-link @click="showPopup">展示弹出层</van-cell>
-      <van-popup v-model="show" position="top" :style="{ height: '20%' }" />
-    
     </div>
+    <van-popup v-model="show" position="top">
+      <div>
+        <div class="header">
+          <img class="header3" @click="showPopup" src="../assets/imgs/xxx.png" alt />
+          <img class="header2" src="../assets/imgs/logo.png" alt />
+        </div>
+        <div class="header-item-wrap">
+          <div class="header-item">首页</div>
+          <div class="header-item">关于厦云</div>
+          <div class="header-item">产品介绍</div>
+          <div class="header-item">解决方案</div>
+          <div class="header-item">活动资讯</div>
+        </div>
+      </div>
+    </van-popup>
   </div>
 </template>
 
@@ -19,12 +31,13 @@ export default {
   name: "HeaderTop",
   data() {
     return {
-      show: false
+      show: false,
+      time: 0.1
     };
   },
   methods: {
     showPopup() {
-      this.show = true;
+      this.show = !this.show;
     }
   },
   mounted() {}
@@ -33,7 +46,7 @@ export default {
 
 <style scoped lang="less">
 @rem: 46.875rem;
-#header {
+.header {
   width: 100%;
   height: 100 / @rem;
   background-color: #fff;
@@ -43,7 +56,7 @@ export default {
   top: 0;
   left: 0;
   z-index: 1000;
-  
+
   .header1 {
     width: 40 / @rem;
     height: 36 / @rem;
@@ -54,5 +67,25 @@ export default {
     height: 80 / @rem;
     margin-left: 190 / @rem;
   }
+  .header3 {
+    width: 32 / @rem;
+    height: 32 / @rem;
+    margin-left: 34 / @rem;
+  }
 }
+.header-item-wrap{
+  margin-top: 100/@rem;
+  .header-item {
+  width: 690 / @rem;
+  height: 100 / @rem;
+  font-size: 30 / @rem;
+  font-family: PingFang SC;
+  font-weight: 600;
+  color: rgba(51, 51, 51, 1);
+  display: flex;
+  align-items: center;
+  padding-left: 41 / @rem;
+}
+}
+
 </style>

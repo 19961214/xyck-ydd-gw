@@ -4,7 +4,7 @@
       <img class="footer-top-img" src="../assets/imgs/footer11.png" alt />
       <div class="footer-top-text1">关注厦云创科</div>
       <div class="footer-top-text2">为您提供发薪报税一站式专属定制服务</div>
-      <div class="footer-top-btn">打开小程序</div>
+      <div class="footer-top-btn" @click="showPopup">打开小程序</div>
     </div>
     <div class="footer-bottom">
       <div class="footer-bottom-text1">服务电话：0571-87299551 拷贝</div>
@@ -14,16 +14,34 @@
       </div>
       <div class="footer-bottom-text3">2019 - 粤ICP备17126097号-2</div>
     </div>
+    <van-popup v-model="show">
+      <div class="popup3">
+        <img class="popup3-img" src="../assets/imgs/code.jpg" alt />
+        <div class="popup3-text">扫一扫或长按保存二维码</div>
+        <div class="popup3-text">进入掌掌财小程序</div>
+        <img class="popup3-img2" @click="showPopup" src="../assets/imgs/xxx.png" alt />
+      </div>
+    </van-popup>
   </div>
 </template>
 
 <script>
+import Vue from "vue";
+import { Popup } from "vant";
+
+Vue.use(Popup);
 export default {
   name: "Footer",
   data() {
-    return {};
+    return {
+      show: false
+    };
   },
-  methods: {},
+  methods: {
+    showPopup() {
+      this.show = !this.show;
+    }
+  },
   mounted() {}
 };
 </script>
@@ -107,15 +125,15 @@ export default {
       .footer-bottom-text2-img {
         width: 115 / @rem;
         height: 35 / @rem;
-        margin-right: 20/@rem;
+        margin-right: 20 / @rem;
       }
       .footer-bottom-text2-text {
         font-size: 24 / @rem;
         font-family: PingFang SC;
         font-weight: 400;
         color: rgba(255, 255, 255, 1);
-        border-left: 1/@rem solid #96A8BB;
-        padding-left: 20/@rem;
+        border-left: 1 / @rem solid #96a8bb;
+        padding-left: 20 / @rem;
       }
     }
     .footer-bottom-text3 {
@@ -124,6 +142,32 @@ export default {
       font-weight: 400;
       color: rgba(97, 126, 154, 1);
       margin-top: 41 / @rem;
+    }
+  }
+  .popup3 {
+    width: 429 / @rem;
+    height: 600 / @rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .popup3-img {
+      // width: 429 / @rem;
+      // height: 429 / @rem;
+      margin-top: 40/@rem;
+      width: 300 / @rem;
+      height: 300 / @rem;
+    }
+    .popup3-text {
+      font-size: 28 / @rem;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #333;
+      margin-top: 40/@rem;
+    }
+    .popup3-img2{
+      width: 40 / @rem;
+      height: 40 / @rem;
+      margin-top: 40/@rem;
     }
   }
 }

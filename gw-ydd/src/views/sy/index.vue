@@ -112,19 +112,19 @@
       <div class="content4-title">全国数十家税优地资源</div>
       <div class="content4-title">一站式代理服务，四大税务服务保障</div>
       <div class="content4-item-wrap">
-        <div class="content4-item">
+        <div class="content4-item" @click="showPopup">
           <img class="content4-item-img" src="../../assets/imgs/item1.png" alt />
           <div class="content4-item-text">资深团队 税法专家</div>
         </div>
-        <div class="content4-item">
+        <div class="content4-item" @click="showPopup">
           <img class="content4-item-img" src="../../assets/imgs/item2.png" alt />
           <div class="content4-item-text">税优扶持 增加收入</div>
         </div>
-        <div class="content4-item content4-items">
+        <div class="content4-item content4-items" @click="showPopup">
           <img class="content4-item-img" src="../../assets/imgs/item3.png" alt />
           <div class="content4-item-text">安全合法 合规便捷</div>
         </div>
-        <div class="content4-item content4-items">
+        <div class="content4-item content4-items" @click="showPopup">
           <img class="content4-item-img" src="../../assets/imgs/item4.png" alt />
           <div class="content4-item-text">一站式税筹 高效落地</div>
         </div>
@@ -199,25 +199,55 @@
       </div>
     </div>
     <Footer></Footer>
+    <van-popup v-model="show" closeable round position="bottom">
+      <div id="popup2">
+        <div class="popup2-title">四大服务保障</div>
+        <div class="popup2-content">
+          <div class="popup2-content-item">
+            <div class="popup2-item-text1">资深团队 税法专家</div>
+            <div class="popup2-item-text2">全国资深财税团队支持熟悉税收政策法规</div>
+          </div>
+           <div class="popup2-content-item">
+            <div class="popup2-item-text1">税优扶持 增加收入</div>
+            <div class="popup2-item-text2">全国数十家税收优惠地多项税收优惠政策扶持节省成本，增加收入</div>
+          </div>
+           <div class="popup2-content-item">
+            <div class="popup2-item-text1">安全合法 合规便捷</div>
+            <div class="popup2-item-text2">税优政策合法，渠道安全合规支持发票办理、报销服务</div>
+          </div>
+           <div class="popup2-content-item">
+            <div class="popup2-item-text1">一站式税筹 高效落地</div>
+            <div class="popup2-item-text2">互联网化全流程线上操作一站式税务筹划</div>
+          </div>
+        </div>
+      </div>
+    </van-popup>
   </div>
 </template>
 
 <script>
 import Vue from "vue";
-import { Swipe, SwipeItem } from "vant";
+import { Swipe, SwipeItem, Popup } from "vant";
 Vue.use(Swipe).use(SwipeItem);
+Vue.use(Popup);
 import HeaderTop from "../../components/HeaderTop.vue";
 import Footer from "../../components/Footer.vue";
 export default {
   name: "",
   data() {
-    return {};
+    return {
+      show: false
+    };
   },
   components: {
     HeaderTop,
     Footer
   },
-  methods: {},
+  methods: {
+    showPopup() {
+      this.show = true;
+    }
+  },
   mounted() {}
 };
 </script>
@@ -226,7 +256,7 @@ export default {
 @rem: 46.875rem;
 .wrap {
   width: 100%;
-  margin-top: 100/@rem;
+  margin-top: 100 / @rem;
   .content1 {
     width: 100%;
     height: 460 / @rem;
@@ -625,7 +655,7 @@ export default {
     width: 100%;
     height: 502 / @rem;
     background: rgba(255, 255, 255, 1);
-    padding-bottom: 82/@rem;
+    padding-bottom: 82 / @rem;
     .content7-title {
       width: 100%;
       height: 140 / @rem;
@@ -649,44 +679,84 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 30/@rem;
-        margin-top: 30/@rem;
+        margin-left: 30 / @rem;
+        margin-top: 30 / @rem;
         float: left;
         .content7-item-img {
           width: 124 / @rem;
           height: 64 / @rem;
         }
-        .content7-item-img2{
+        .content7-item-img2 {
           width: 151 / @rem;
           height: 62 / @rem;
         }
-        .content7-item-img3{
+        .content7-item-img3 {
           width: 134 / @rem;
           height: 51 / @rem;
         }
-        .content7-item-img4{
+        .content7-item-img4 {
           width: 159 / @rem;
           height: 39 / @rem;
         }
-        .content7-item-img5{
+        .content7-item-img5 {
           width: 120 / @rem;
           height: 66 / @rem;
         }
-        .content7-item-img6{
+        .content7-item-img6 {
           width: 126 / @rem;
           height: 43 / @rem;
         }
-        .content7-item-img7{
+        .content7-item-img7 {
           width: 126 / @rem;
           height: 50 / @rem;
         }
-        .content7-item-img8{
+        .content7-item-img8 {
           width: 137 / @rem;
           height: 46 / @rem;
         }
-        .content7-item-img9{
+        .content7-item-img9 {
           width: 151 / @rem;
           height: 54 / @rem;
+        }
+      }
+    }
+  }
+  #popup2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .popup2-title {
+      font-size: 30 / @rem;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: rgba(51, 51, 51, 1);
+      margin-top: 51 / @rem;
+    }
+    .popup2-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 21/@rem;
+      padding-bottom: 241/@rem;
+      .popup2-content-item {
+        display: flex;
+        flex-direction: column;
+        margin-top: 70/@rem;
+        margin-left: 41/@rem;
+        .popup2-item-text1 {
+          font-size: 28 / @rem;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: rgba(51, 51, 51, 1);
+        }
+        .popup2-item-text2 {
+          font-size: 22 / @rem;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: rgba(102, 102, 102, 1);
+          margin-top: 37/@rem;
         }
       }
     }

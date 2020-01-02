@@ -6,7 +6,13 @@ Vue.use(Router);
 export default new Router({
     base: process.env.BASE_URL,
     routes: [
-        { path: '/', redirect: '/cp' },
+        { path: '/', redirect: '/al' },
+        {
+            path: '/al',
+            name: 'al',
+            component: () =>
+                import ( /* webpackChunkName: "AboutUs" */ './views/al/index.vue'),
+        },
         {
             path: '/sy',
             name: 'aboutUsTwo',
