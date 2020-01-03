@@ -106,7 +106,7 @@ export default {
     .footer-bottom-text1 {
       width: 400 / @rem;
       height: 60 / @rem;
-      border: 1 / @rem solid rgba(150, 168, 187, 1);
+      border: 2 / @rem solid rgba(150, 168, 187, 1);
       border-radius: 30 / @rem;
       font-size: 24 / @rem;
       font-family: PingFang SC;
