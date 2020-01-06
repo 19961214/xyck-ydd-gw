@@ -14,7 +14,8 @@ export function ajax(config) {
             timeout: 3000,
             method: 'post',
             //定义请求根目录
-            baseURL: 'https://97.3xzt.com'
+            baseURL: 'https://prm.xyck.com'
+            // baseURL: 'https://97.3xzt.com'
                 // baseURL: 'http://172.20.10.1:8018'
         });
         // service.interceptors.response.use(

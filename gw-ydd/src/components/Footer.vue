@@ -7,7 +7,7 @@
       <div class="footer-top-btn" @click="showPopup">打开小程序</div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-bottom-text1">服务电话：0571-87299551 拷贝</div>
+      <div class="footer-bottom-text1">服务电话：0571-87299551</div>
       <div class="footer-bottom-text2">
         <img class="footer-bottom-text2-img" src="../assets/imgs/footer2.png" alt />
         <div class="footer-bottom-text2-text">杭州厦云创科信息技术有限公司</div>

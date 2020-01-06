@@ -13,29 +13,29 @@
         <div class="titles-line"></div>新闻动态
       </div>
       <div class="content2-item-wrap">
-        <div class="content2-item">
+        <div class="content2-item" @click="gotoItem1">
           <img class="content2-item-img" src="../../assets/imgs/hd-item1.png" alt />
           <div class="content2-item-text">
             <div class="content2-item-text1">中小企业怎么做税务筹划 中小企如何做好税务筹划</div>
             <div class="content2-item-text2">2019.04.03</div>
           </div>
         </div>
-        <div class="content2-item">
-          <img class="content2-item-img" src="../../assets/imgs/hd-item2.png" alt />
+        <div class="content2-item" @click="gotoItem2">
+          <img class="content2-item-img" src="../../assets/imgs/hd-item6.png" alt />
           <div class="content2-item-text">
             <div class="content2-item-text1">明年1月1日社保入税 这10大变化财务要注意</div>
             <div class="content2-item-text2">2019.06.05</div>
           </div>
         </div>
-        <div class="content2-item">
-          <img class="content2-item-img" src="../../assets/imgs/hd-item3.png" alt />
+        <div class="content2-item" @click="gotoItem3">
+          <img class="content2-item-img" src="../../assets/imgs/hd-item2.png" alt />
           <div class="content2-item-text">
             <div class="content2-item-text1">两会提议：自由职业者要纳入正式社会职业体系？</div>
             <div class="content2-item-text2">2019.08.07</div>
           </div>
         </div>
-        <div class="content2-item">
-          <img class="content2-item-img" src="../../assets/imgs/hd-item4.png" alt />
+        <div class="content2-item" @click="gotoItem4">
+          <img class="content2-item-img" src="../../assets/imgs/hd-item3.png" alt />
           <div class="content2-item-text">
             <div class="content2-item-text1">2018小微企业认定标准 小微企业优惠政策解读</div>
             <div class="content2-item-text2">2019.09.20</div>
@@ -50,7 +50,7 @@
         <div class="titles-line"></div>活动资讯
       </div>
       <div class="content3-item-wrap">
-        <div class="content3-item">
+        <div class="content3-item" @click="gotoItem5">
           <img class="content3-item-img" src="../../assets/imgs/hd-item5.png" alt />
           <div class="content3-item-text">
             <div class="content3-item-text1">重磅利好第二弹——小微企业标准将放宽！</div>
@@ -58,8 +58,8 @@
             <div class="content3-item-text3">2019.09.10</div>
           </div>
         </div>
-        <div class="content3-item">
-          <img class="content3-item-img" src="../../assets/imgs/hd-item6.png" alt />
+        <div class="content3-item" @click="gotoItem6">
+          <img class="content3-item-img" src="../../assets/imgs/hd-item4.png" alt />
           <div class="content3-item-text">
             <div class="content3-item-text1">工薪阶层如何做税务筹划 工薪阶层税务筹划解析</div>
             <div class="content3-item-text2">个税一直都是工薪阶层非常在意的事情。辛辛苦苦赚来的钱，却要拿出一大截交个税，谁都不会乐意。所以下面厦云创科小编给大家说说工...</div>
@@ -85,7 +85,26 @@ export default {
     HeaderTop,
     Footer
   },
-  methods: {},
+  methods: {
+    gotoItem1() {
+      this.$router.push({ path: "/item" });
+    },
+    gotoItem2() {
+      this.$router.push({ path: "/item2" });
+    },
+    gotoItem3() {
+      this.$router.push({ path: "/item3" });
+    },
+    gotoItem4() {
+      this.$router.push({ path: "/item4" });
+    },
+    gotoItem5() {
+      this.$router.push({ path: "/item5" });
+    },
+    gotoItem6() {
+      this.$router.push({ path: "/item6" });
+    },
+  },
   mounted() {}
 };
 </script>

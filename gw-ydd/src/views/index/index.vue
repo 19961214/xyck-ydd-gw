@@ -25,7 +25,7 @@
           <span>产 业 运 营</span>
         </div>
       </div>
-      <div class="content1-btn">申请合作</div>
+      <div class="content1-btn" @click="showPopup2s">申请合作</div>
     </div>
     <div class="content2">
       <div class="content2-title">掌税通</div>
@@ -140,7 +140,7 @@
         <div
           class="content5-item-text"
         >专业企业财税一站式代理服务，多种税优方案，与税优地政府、委托代征机构深度合作，采取最佳税收模式，有效降低企业成本，企业将代发给自然人的款项及税金打款给掌掌财商户服务平台，平台收款后开具发票给企业，代发款项给自然人，并为自然人到税务机关汇总申报税费并开具完税凭证。</div>
-        <div class="content5-item-btn">获取免费方案</div>
+        <div class="content5-item-btn" @click="showPopup2s">获取免费方案</div>
       </div>
 
       <div class="content5-item-wrap content5-item-wrap2">
@@ -151,7 +151,7 @@
         <div
           class="content5-item-text"
         >为客户在设立个体工商户企业或个人工作室，并为其提供财税一站式代理服务，帮助客户合法获得免缴企业所得税资格并申请个税核定，从而为客户实现税负最低化，收益最大化。主要适用于年收入较高较稳定的自由职业者、创客、合伙人。</div>
-        <div class="content5-item-btn content5-item-btns">获取免费方案</div>
+        <div class="content5-item-btn content5-item-btns" @click="showPopup2s">获取免费方案</div>
       </div>
     </div>
     <div class="content6">
@@ -163,7 +163,7 @@
         <img class="content6-img" src="../../assets/imgs/fs4.png" alt />
         <img class="content6-img" src="../../assets/imgs/fs5.png" alt />
       </div>
-      <div class="content6-btn">申请合作</div>
+      <div class="content6-btn" @click="showPopup2s">申请合作</div>
     </div>
     <div class="gap"></div>
     <div class="content7">
@@ -207,19 +207,50 @@
             <div class="popup2-item-text1">资深团队 税法专家</div>
             <div class="popup2-item-text2">全国资深财税团队支持熟悉税收政策法规</div>
           </div>
-           <div class="popup2-content-item">
+          <div class="popup2-content-item">
             <div class="popup2-item-text1">税优扶持 增加收入</div>
             <div class="popup2-item-text2">全国数十家税收优惠地多项税收优惠政策扶持节省成本，增加收入</div>
           </div>
-           <div class="popup2-content-item">
+          <div class="popup2-content-item">
             <div class="popup2-item-text1">安全合法 合规便捷</div>
             <div class="popup2-item-text2">税优政策合法，渠道安全合规支持发票办理、报销服务</div>
           </div>
-           <div class="popup2-content-item">
+          <div class="popup2-content-item">
             <div class="popup2-item-text1">一站式税筹 高效落地</div>
             <div class="popup2-item-text2">互联网化全流程线上操作一站式税务筹划</div>
           </div>
         </div>
+      </div>
+    </van-popup>
+    <van-popup v-model="show2">
+      <div id="popup2s" v-if="isShow">
+        <img class="popup2s-xxx" @click="popups" src="../../assets/imgs/xxx.png" alt />
+        <div class="popup2s-title">联系我们</div>
+        <div class="popup2s-text">留下您的联系方式，我们的客服将与您联系，并向您提供免费税务筹划方案。</div>
+        <div class="popup2s-input-wrap">
+          <img class="popup2s-input-img" src="../../assets/imgs/name.png" alt />
+          <input class="popup2s-input" v-model="date.contact" type="text" placeholder="您的称呼" />
+        </div>
+        <div class="popup2s-input-wrap">
+          <img class="popup2s-input-img" src="../../assets/imgs/icon_phone.png" alt />
+          <input class="popup2s-input" v-model="date.phone" type="text" placeholder="您的联系方式" />
+        </div>
+        <div class="popup2s-input-wrap">
+          <img class="popup2s-input-img" src="../../assets/imgs/enterprise.png" alt />
+          <input class="popup2s-input" v-model="date.companyName" type="text" placeholder="企业名称" />
+        </div>
+        <div
+          class="popup2s-btn"
+          :class="date.contact && date.phone && date.companyName ? 'blue' : ''"
+          @click="submit"
+        >提交信息</div>
+      </div>
+      <div id="popup2ss" v-if="!isShow">
+        <img class="popup2ss-xxx" @click="popups" src="../../assets/imgs/xxx.png" alt />
+        <img class="popup2ss-img" src="../../assets/imgs/true.png" alt />
+        <div class="popup2ss-title">提交成功</div>
+        <div class="popup2ss-text">我们的客服将与您联系，并向您提供免费税务筹划方案。</div>
+        <div class="popup2ss-btn" @click="goBack">返回</div>
       </div>
     </van-popup>
   </div>
@@ -232,11 +263,19 @@ Vue.use(Swipe).use(SwipeItem);
 Vue.use(Popup);
 import HeaderTop from "../../components/HeaderTop.vue";
 import Footer from "../../components/Footer.vue";
+import { getData } from "../../api/index";
 export default {
   name: "",
   data() {
     return {
-      show: false
+      show: false,
+      show2: false,
+      date: {
+        contact: "",
+        phone: "",
+        companyName: ""
+      },
+      isShow: true
     };
   },
   components: {
@@ -244,8 +283,34 @@ export default {
     Footer
   },
   methods: {
+    popups() {
+      this.show2 = false;
+      this.isShow = true;
+    },
     showPopup() {
       this.show = true;
+    },
+    showPopup2s() {
+      this.show2 = true;
+    },
+    async submit() {
+      if (this.date.contact && this.date.phone && this.date.companyName) {
+        // this.isShow = false;
+        const parameter = this.date;
+        console.log(parameter);
+        const result = await getData(parameter);
+        // console.log(result);
+        this.isShow = false;
+        this.date.contact = "";
+        this.date.phone = "";
+        this.date.companyName = "";
+      } else {
+        return;
+      }
+    },
+    goBack() {
+      this.show2 = false;
+      this.isShow = true;
     }
   },
   mounted() {}
@@ -738,13 +803,13 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      margin-top: 21/@rem;
-      padding-bottom: 241/@rem;
+      margin-top: 21 / @rem;
+      padding-bottom: 241 / @rem;
       .popup2-content-item {
         display: flex;
         flex-direction: column;
-        margin-top: 70/@rem;
-        margin-left: 41/@rem;
+        margin-top: 70 / @rem;
+        margin-left: 41 / @rem;
         .popup2-item-text1 {
           font-size: 28 / @rem;
           font-family: PingFang SC;
@@ -756,9 +821,135 @@ export default {
           font-family: PingFang SC;
           font-weight: 400;
           color: rgba(102, 102, 102, 1);
-          margin-top: 37/@rem;
+          margin-top: 37 / @rem;
         }
       }
+    }
+  }
+  #popup2ss {
+    width: 690 / @rem;
+    height: 700 / @rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10 / @rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .popup2ss-xxx {
+      width: 30 / @rem;
+      height: 30 / @rem;
+      position: absolute;
+      top: 30 / @rem;
+      right: 30 / @rem;
+    }
+    .popup2ss-img {
+      width: 153 / @rem;
+      height: 153 / @rem;
+      margin-top: 139 / @rem;
+    }
+    .popup2ss-title {
+      font-size: 32 / @rem;
+      font-family: PingFang SC;
+      font-weight: 600;
+      color: rgba(51, 51, 51, 1);
+      margin-top: 47 / @rem;
+    }
+    .popup2ss-text {
+      width: 531 / @rem;
+      height: 70 / @rem;
+      font-size: 26 / @rem;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: rgba(102, 102, 102, 1);
+      line-height: 45 / @rem;
+      margin-top: 27 / @rem;
+    }
+    .popup2ss-btn {
+      width: 600 / @rem;
+      height: 70 / @rem;
+      background: rgba(20, 171, 253, 1);
+      border-radius: 6 / @rem;
+      font-size: 30 / @rem;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 64 / @rem;
+    }
+  }
+  #popup2s {
+    width: 690 / @rem;
+    height: 700 / @rem;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10 / @rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .popup2s-xxx {
+      width: 30 / @rem;
+      height: 30 / @rem;
+      position: absolute;
+      top: 30 / @rem;
+      right: 30 / @rem;
+    }
+    .popup2s-title {
+      font-size: 32 / @rem;
+      font-family: PingFang SC;
+      font-weight: 600;
+      color: rgba(51, 51, 51, 1);
+      margin-top: 49 / @rem;
+    }
+    .popup2s-text {
+      width: 522 / @rem;
+      height: 70 / @rem;
+      font-size: 26 / @rem;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: rgba(102, 102, 102, 1);
+      line-height: 45 / @rem;
+      margin-top: 27 / @rem;
+      margin-bottom: 34 / @rem;
+    }
+    .popup2s-input-wrap {
+      width: 600 / @rem;
+      height: 70 / @rem;
+      background: rgba(250, 250, 250, 1);
+      border: 1 / @rem solid rgba(238, 238, 238, 1);
+      border-radius: 6 / @rem;
+      margin-top: 20 / @rem;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .popup2s-input-img {
+        width: 40 / @rem;
+        height: 40 / @rem;
+      }
+      .popup2s-input {
+        width: 500 / @rem;
+        height: 50 / @rem;
+        background: rgba(250, 250, 250, 1);
+        font-size: 24 / @rem;
+      }
+    }
+    .popup2s-btn {
+      width: 600 / @rem;
+      height: 70 / @rem;
+      background: rgba(220, 220, 220, 1);
+      border-radius: 6 / @rem;
+      font-size: 30 / @rem;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 60 / @rem;
+    }
+    .blue {
+      background: rgba(20, 171, 253, 1);
     }
   }
 }

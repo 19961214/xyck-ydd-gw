@@ -1,6 +1,16 @@
 import { ajax } from '@/utils/request.js';
 
 const BSAE = "/api";
+// export const getData = (data) => ajax(BASE+`/business/contact/addInfo`,data)
+
+export function getData(data) {
+    return ajax({
+        url: '/business/contact/addInfo',
+        method: "POST",
+        params: data,
+    })
+}
+
 
 //管理员登录
 export function Login(phoneNumber, passWord) {

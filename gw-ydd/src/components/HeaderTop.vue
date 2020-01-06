@@ -11,11 +11,11 @@
           <img class="header2" src="../assets/imgs/logo.png" alt />
         </div>
         <div class="header-item-wrap">
-          <div class="header-item">首页</div>
-          <div class="header-item">关于厦云</div>
-          <div class="header-item">产品介绍</div>
-          <div class="header-item">解决方案</div>
-          <div class="header-item">活动资讯</div>
+          <div class="header-item" @click="gotoIndex">首页</div>
+          <div class="header-item" @click="gotoArticle">关于厦云</div>
+          <div class="header-item" @click="gotoProduct">产品介绍</div>
+          <div class="header-item" @click="gotoTeam">解决方案</div>
+          <div class="header-item" @click="gotoStory">活动资讯</div>
         </div>
       </div>
     </van-popup>
@@ -38,9 +38,26 @@ export default {
   methods: {
     showPopup() {
       this.show = !this.show;
-    }
+    },
+    gotoIndex() {
+      this.$router.push({ path: "/index" });
+    },
+    gotoArticle() {
+      this.$router.push({ path: "/article" });
+    },
+    gotoTeam() {
+      this.$router.push({ path: "/team" });
+    },
+    gotoStory() {
+      this.$router.push({ path: "/story" });
+    },
+    gotoProduct() {
+      this.$router.push({ path: "/product" });
+    },
   },
-  mounted() {}
+  mounted() {
+    
+  }
 };
 </script>
 
