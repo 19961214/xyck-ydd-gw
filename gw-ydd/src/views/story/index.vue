@@ -87,7 +87,7 @@ export default {
   },
   methods: {
     gotoItem1() {
-      this.$router.push({ path: "/item" });
+      this.$router.push({ path: "/item1" });
     },
     gotoItem2() {
       this.$router.push({ path: "/item2" });
@@ -105,7 +105,21 @@ export default {
       this.$router.push({ path: "/item6" });
     },
   },
-  mounted() {}
+  mounted() {
+    console.log(999)
+    if (
+      navigator.userAgent.match(
+        /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+      )
+    ) {
+      
+      console.log(222);
+      
+    } else {
+      console.log(333);
+      location.href = "https://www.xyck.com/story";
+    }
+  }
 };
 </script>
 

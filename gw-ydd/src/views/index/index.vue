@@ -168,33 +168,121 @@
     <div class="gap"></div>
     <div class="content7">
       <div class="content7-title">合作伙伴</div>
-      <div class="content7-item-wrap">
-        <div class="content7-item">
-          <img class="content7-item-img" src="../../assets/imgs/hb1.png" alt />
-        </div>
-        <div class="content7-item">
-          <img class="content7-item-img2" src="../../assets/imgs/hb2.png" alt />
-        </div>
-        <div class="content7-item">
-          <img class="content7-item-img3" src="../../assets/imgs/hb3.png" alt />
-        </div>
-        <div class="content7-item">
-          <img class="content7-item-img4" src="../../assets/imgs/hb4.png" alt />
-        </div>
-        <div class="content7-item">
-          <img class="content7-item-img5" src="../../assets/imgs/hb5.png" alt />
-        </div>
-        <div class="content7-item">
-          <img class="content7-item-img6" src="../../assets/imgs/hb6.png" alt />
-        </div>
-        <div class="content7-item">
-          <img class="content7-item-img7" src="../../assets/imgs/hb7.png" alt />
-        </div>
-        <div class="content7-item">
-          <img class="content7-item-img8" src="../../assets/imgs/hb8.png" alt />
-        </div>
-        <div class="content7-item">
-          <img class="content7-item-img9" src="../../assets/imgs/hb9.png" alt />
+      <div class="content7-item-wraps">
+        <div class="content7-item-wrap">
+          <div class="content7-items">
+            <div class="content7-item">
+              <img class="content7-item-img" src="../../assets/imgs/hb1.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img2" src="../../assets/imgs/hb2.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img3" src="../../assets/imgs/hb3.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img4" src="../../assets/imgs/hb4.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img5" src="../../assets/imgs/hb5.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img6" src="../../assets/imgs/hb6.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img7" src="../../assets/imgs/hb7.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img8" src="../../assets/imgs/hb8.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img9" src="../../assets/imgs/hb9.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb10.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb11.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb12.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb13.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb14.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb15.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img" src="../../assets/imgs/hb1.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img2" src="../../assets/imgs/hb2.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img3" src="../../assets/imgs/hb3.png" alt />
+            </div>
+          </div>
+          <div class="content7-items">
+            <div class="content7-item">
+              <img class="content7-item-img" src="../../assets/imgs/hb1.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img2" src="../../assets/imgs/hb2.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img3" src="../../assets/imgs/hb3.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img4" src="../../assets/imgs/hb4.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img5" src="../../assets/imgs/hb5.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img6" src="../../assets/imgs/hb6.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img7" src="../../assets/imgs/hb7.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img8" src="../../assets/imgs/hb8.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img9" src="../../assets/imgs/hb9.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb10.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb11.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb12.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb13.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb14.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img10" src="../../assets/imgs/hb15.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img" src="../../assets/imgs/hb1.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img2" src="../../assets/imgs/hb2.png" alt />
+            </div>
+            <div class="content7-item">
+              <img class="content7-item-img3" src="../../assets/imgs/hb3.png" alt />
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -299,7 +387,7 @@ export default {
         const parameter = this.date;
         console.log(parameter);
         const result = await getData(parameter);
-        // console.log(result);
+        console.log(result);
         this.isShow = false;
         this.date.contact = "";
         this.date.phone = "";
@@ -313,7 +401,19 @@ export default {
       this.isShow = true;
     }
   },
-  mounted() {}
+  mounted() {
+    console.log(999);
+    if (
+      navigator.userAgent.match(
+        /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
+      )
+    ) {
+      console.log(222);
+    } else {
+      console.log(333);
+      location.href = "https://www.xyck.com/index";
+    }
+  }
 };
 </script>
 
@@ -642,7 +742,7 @@ export default {
       .content5-item-text {
         width: 613 / @rem;
         height: 175 / @rem;
-        font-size: 24px / @rem;
+        font-size: 24 / @rem;
         font-family: PingFang SC;
         font-weight: 400;
         color: rgba(102, 102, 102, 1);
@@ -732,56 +832,73 @@ export default {
       justify-content: center;
       align-items: center;
     }
-    .content7-item-wrap {
+    .content7-item-wraps {
       width: 100%;
       overflow: hidden;
-      .content7-item {
-        width: 210 / @rem;
-        height: 80 / @rem;
-        background: rgba(255, 255, 255, 1);
-        border: 1 / @rem solid rgba(238, 238, 238, 1);
-        border-radius: 6 / @rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 30 / @rem;
-        margin-top: 30 / @rem;
-        float: left;
-        .content7-item-img {
-          width: 124 / @rem;
-          height: 64 / @rem;
+      .content7-item-wrap {
+        width: 400%;
+        // overflow: hidden;
+        animation: move 8s linear infinite;
+        .content7-item {
+          width: 210 / @rem;
+          height: 80 / @rem;
+          background: rgba(255, 255, 255, 1);
+          border: 1 / @rem solid rgba(238, 238, 238, 1);
+          border-radius: 6 / @rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 30 / @rem;
+          margin-top: 30 / @rem;
+          float: left;
+          .content7-item-img {
+            width: 124 / @rem;
+            height: 64 / @rem;
+          }
+          .content7-item-img2 {
+            width: 151 / @rem;
+            height: 62 / @rem;
+          }
+          .content7-item-img3 {
+            width: 134 / @rem;
+            height: 51 / @rem;
+          }
+          .content7-item-img4 {
+            width: 159 / @rem;
+            height: 39 / @rem;
+          }
+          .content7-item-img5 {
+            width: 120 / @rem;
+            height: 66 / @rem;
+          }
+          .content7-item-img6 {
+            width: 126 / @rem;
+            height: 43 / @rem;
+          }
+          .content7-item-img7 {
+            width: 126 / @rem;
+            height: 50 / @rem;
+          }
+          .content7-item-img8 {
+            width: 137 / @rem;
+            height: 46 / @rem;
+          }
+          .content7-item-img9 {
+            width: 151 / @rem;
+            height: 54 / @rem;
+          }
+          .content7-item-img10 {
+            width: 192 / @rem;
+            height: 68 / @rem;
+          }
         }
-        .content7-item-img2 {
-          width: 151 / @rem;
-          height: 62 / @rem;
+      }
+      @keyframes move {
+        0% {
+          transform: translateX(0px);
         }
-        .content7-item-img3 {
-          width: 134 / @rem;
-          height: 51 / @rem;
-        }
-        .content7-item-img4 {
-          width: 159 / @rem;
-          height: 39 / @rem;
-        }
-        .content7-item-img5 {
-          width: 120 / @rem;
-          height: 66 / @rem;
-        }
-        .content7-item-img6 {
-          width: 126 / @rem;
-          height: 43 / @rem;
-        }
-        .content7-item-img7 {
-          width: 126 / @rem;
-          height: 50 / @rem;
-        }
-        .content7-item-img8 {
-          width: 137 / @rem;
-          height: 46 / @rem;
-        }
-        .content7-item-img9 {
-          width: 151 / @rem;
-          height: 54 / @rem;
+        100% {
+          transform: translateX(-1440 / @rem);
         }
       }
     }

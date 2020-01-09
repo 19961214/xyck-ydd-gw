@@ -17,8 +17,8 @@
     <van-popup v-model="show">
       <div class="popup3">
         <img class="popup3-img" src="../assets/imgs/code.jpg" alt />
-        <div class="popup3-text">扫一扫或长按保存二维码</div>
-        <div class="popup3-text">进入掌掌财小程序</div>
+        <div class="popup3-text1">掌掌财小程序</div>
+        <div class="popup3-text2">扫一扫或长按保存二维码进入掌掌财小程序</div>
         <img class="popup3-img2" @click="showPopup" src="../assets/imgs/xxx.png" alt />
       </div>
     </van-popup>
@@ -145,29 +145,39 @@ export default {
     }
   }
   .popup3 {
-    width: 429 / @rem;
-    height: 600 / @rem;
+    width: 690 / @rem;
+    height: 700 / @rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     .popup3-img {
       // width: 429 / @rem;
       // height: 429 / @rem;
-      margin-top: 40/@rem;
-      width: 300 / @rem;
-      height: 300 / @rem;
+      margin-top: 114/@rem;
+      width: 363 / @rem;
+      height: 363 / @rem;
     }
-    .popup3-text {
-      font-size: 28 / @rem;
+    .popup3-text1 {
+      font-size: 32 / @rem;
       font-family: PingFang SC;
-      font-weight: 400;
+      font-weight: 600;
       color: #333;
       margin-top: 40/@rem;
     }
+    .popup3-text2 {
+      font-size: 26 / @rem;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #666666;
+      margin-top: 26/@rem;
+    }
     .popup3-img2{
-      width: 40 / @rem;
-      height: 40 / @rem;
-      margin-top: 40/@rem;
+      width: 30 / @rem;
+      height: 30 / @rem;
+      position: absolute;
+      top: 30/@rem;
+      right: 30/@rem;
     }
   }
 }
